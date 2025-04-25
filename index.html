@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Idade</title>
+</head>
+<body>
+    <h1>Calculadora de Idade</h1>
+    <form method="POST" action="/calcular_idade">
+        <label for="ano_nascimento">Ano de nascimento:</label>
+        <input type="text" name="ano_nascimento" id="ano_nascimento" required>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if idade is not none %}
+        <p>Sua idade é: {{ idade }} anos.</p>
+    {% endif %}
+</body>
+</html>
